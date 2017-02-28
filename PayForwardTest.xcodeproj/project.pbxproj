@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2879CFAB1E65880F002A91A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879CFAA1E65880F002A91A3 /* AppDelegate.swift */; };
+		2879CFB01E65880F002A91A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2879CFAE1E65880F002A91A3 /* Main.storyboard */; };
+		2879CFB21E65880F002A91A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2879CFB11E65880F002A91A3 /* Assets.xcassets */; };
+		2879CFB51E65880F002A91A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2879CFB31E65880F002A91A3 /* LaunchScreen.storyboard */; };
+		2879CFBD1E65882C002A91A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2879CFBC1E65882C002A91A3 /* GoogleService-Info.plist */; };
+		28845DD41E658D82008B01EA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845DD31E658D82008B01EA /* LoginViewController.swift */; };
+		28845DD81E6599AF008B01EA /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845DD71E6599AF008B01EA /* SignupViewController.swift */; };
+		28845DDA1E65A3A1008B01EA /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845DD91E65A3A1008B01EA /* VerifyViewController.swift */; };
+		ECDB6D5D1306C924E3653DB5 /* Pods_PayForwardTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F969CCEEC265EFD7B045E9AE /* Pods_PayForwardTest.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2879CFA71E65880F002A91A3 /* PayForwardTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PayForwardTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2879CFAA1E65880F002A91A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2879CFAF1E65880F002A91A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2879CFB11E65880F002A91A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2879CFB41E65880F002A91A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2879CFB61E65880F002A91A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2879CFBC1E65882C002A91A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		28845DD31E658D82008B01EA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		28845DD71E6599AF008B01EA /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		28845DD91E65A3A1008B01EA /* VerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
+		4AFD061D40252A2A3476B3B6 /* Pods-PayForwardTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayForwardTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-PayForwardTest/Pods-PayForwardTest.release.xcconfig"; sourceTree = "<group>"; };
+		5920C559286547D3B12AA299 /* Pods-PayForwardTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayForwardTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PayForwardTest/Pods-PayForwardTest.debug.xcconfig"; sourceTree = "<group>"; };
+		F969CCEEC265EFD7B045E9AE /* Pods_PayForwardTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayForwardTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2879CFA41E65880F002A91A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECDB6D5D1306C924E3653DB5 /* Pods_PayForwardTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2879CF9E1E65880F002A91A3 = {
+			isa = PBXGroup;
+			children = (
+				2879CFA91E65880F002A91A3 /* PayForwardTest */,
+				2879CFA81E65880F002A91A3 /* Products */,
+				4F28B7E724ABEBB1B0566AF7 /* Pods */,
+				61A7C08CCF5C0F40A98A3B7B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2879CFA81E65880F002A91A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2879CFA71E65880F002A91A3 /* PayForwardTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2879CFA91E65880F002A91A3 /* PayForwardTest */ = {
+			isa = PBXGroup;
+			children = (
+				2879CFAA1E65880F002A91A3 /* AppDelegate.swift */,
+				2879CFAE1E65880F002A91A3 /* Main.storyboard */,
+				28845DD21E658D5C008B01EA /* Controllers */,
+				2879CFB11E65880F002A91A3 /* Assets.xcassets */,
+				2879CFB31E65880F002A91A3 /* LaunchScreen.storyboard */,
+				2879CFB61E65880F002A91A3 /* Info.plist */,
+				2879CFBC1E65882C002A91A3 /* GoogleService-Info.plist */,
+			);
+			path = PayForwardTest;
+			sourceTree = "<group>";
+		};
+		28845DD21E658D5C008B01EA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				28845DD31E658D82008B01EA /* LoginViewController.swift */,
+				28845DD71E6599AF008B01EA /* SignupViewController.swift */,
+				28845DD91E65A3A1008B01EA /* VerifyViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4F28B7E724ABEBB1B0566AF7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5920C559286547D3B12AA299 /* Pods-PayForwardTest.debug.xcconfig */,
+				4AFD061D40252A2A3476B3B6 /* Pods-PayForwardTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		61A7C08CCF5C0F40A98A3B7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F969CCEEC265EFD7B045E9AE /* Pods_PayForwardTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2879CFA61E65880F002A91A3 /* PayForwardTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2879CFB91E65880F002A91A3 /* Build configuration list for PBXNativeTarget "PayForwardTest" */;
+			buildPhases = (
+				2D15B0844037033517AC82A9 /* [CP] Check Pods Manifest.lock */,
+				2879CFA31E65880F002A91A3 /* Sources */,
+				2879CFA41E65880F002A91A3 /* Frameworks */,
+				2879CFA51E65880F002A91A3 /* Resources */,
+				2846BAE3AB2A20867B3A3B33 /* [CP] Embed Pods Frameworks */,
+				131519D7F21C672834431D8A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PayForwardTest;
+			productName = PayForwardTest;
+			productReference = 2879CFA71E65880F002A91A3 /* PayForwardTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2879CF9F1E65880F002A91A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Sarthak Khillon";
+				TargetAttributes = {
+					2879CFA61E65880F002A91A3 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = KAE97MM9RT;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2879CFA21E65880F002A91A3 /* Build configuration list for PBXProject "PayForwardTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2879CF9E1E65880F002A91A3;
+			productRefGroup = 2879CFA81E65880F002A91A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2879CFA61E65880F002A91A3 /* PayForwardTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2879CFA51E65880F002A91A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2879CFBD1E65882C002A91A3 /* GoogleService-Info.plist in Resources */,
+				2879CFB51E65880F002A91A3 /* LaunchScreen.storyboard in Resources */,
+				2879CFB21E65880F002A91A3 /* Assets.xcassets in Resources */,
+				2879CFB01E65880F002A91A3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		131519D7F21C672834431D8A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayForwardTest/Pods-PayForwardTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2846BAE3AB2A20867B3A3B33 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayForwardTest/Pods-PayForwardTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D15B0844037033517AC82A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2879CFA31E65880F002A91A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28845DD81E6599AF008B01EA /* SignupViewController.swift in Sources */,
+				28845DDA1E65A3A1008B01EA /* VerifyViewController.swift in Sources */,
+				28845DD41E658D82008B01EA /* LoginViewController.swift in Sources */,
+				2879CFAB1E65880F002A91A3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2879CFAE1E65880F002A91A3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2879CFAF1E65880F002A91A3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2879CFB31E65880F002A91A3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2879CFB41E65880F002A91A3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2879CFB71E65880F002A91A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2879CFB81E65880F002A91A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2879CFBA1E65880F002A91A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5920C559286547D3B12AA299 /* Pods-PayForwardTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KAE97MM9RT;
+				INFOPLIST_FILE = PayForwardTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sarthakkhillon.PayForwardTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2879CFBB1E65880F002A91A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AFD061D40252A2A3476B3B6 /* Pods-PayForwardTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KAE97MM9RT;
+				INFOPLIST_FILE = PayForwardTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sarthakkhillon.PayForwardTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2879CFA21E65880F002A91A3 /* Build configuration list for PBXProject "PayForwardTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2879CFB71E65880F002A91A3 /* Debug */,
+				2879CFB81E65880F002A91A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2879CFB91E65880F002A91A3 /* Build configuration list for PBXNativeTarget "PayForwardTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2879CFBA1E65880F002A91A3 /* Debug */,
+				2879CFBB1E65880F002A91A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2879CF9F1E65880F002A91A3 /* Project object */;
+}
