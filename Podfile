@@ -8,4 +8,5 @@ target 'PayForwardTest' do
   # Pods for PayForwardTest
 	pod 'Firebase/Core'
     pod 'Firebase/Auth'
+    pod 'Firebase/Database'
 end

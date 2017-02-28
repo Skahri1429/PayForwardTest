@@ -15,6 +15,7 @@
 		28845DD41E658D82008B01EA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845DD31E658D82008B01EA /* LoginViewController.swift */; };
 		28845DD81E6599AF008B01EA /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845DD71E6599AF008B01EA /* SignupViewController.swift */; };
 		28845DDA1E65A3A1008B01EA /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845DD91E65A3A1008B01EA /* VerifyViewController.swift */; };
+		28845DDC1E65B45B008B01EA /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845DDB1E65B45B008B01EA /* UserViewController.swift */; };
 		ECDB6D5D1306C924E3653DB5 /* Pods_PayForwardTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F969CCEEC265EFD7B045E9AE /* Pods_PayForwardTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		28845DD31E658D82008B01EA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		28845DD71E6599AF008B01EA /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		28845DD91E65A3A1008B01EA /* VerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
+		28845DDB1E65B45B008B01EA /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		4AFD061D40252A2A3476B3B6 /* Pods-PayForwardTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayForwardTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-PayForwardTest/Pods-PayForwardTest.release.xcconfig"; sourceTree = "<group>"; };
 		5920C559286547D3B12AA299 /* Pods-PayForwardTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayForwardTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PayForwardTest/Pods-PayForwardTest.debug.xcconfig"; sourceTree = "<group>"; };
 		F969CCEEC265EFD7B045E9AE /* Pods_PayForwardTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayForwardTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,7 @@
 				28845DD31E658D82008B01EA /* LoginViewController.swift */,
 				28845DD71E6599AF008B01EA /* SignupViewController.swift */,
 				28845DD91E65A3A1008B01EA /* VerifyViewController.swift */,
+				28845DDB1E65B45B008B01EA /* UserViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28845DD81E6599AF008B01EA /* SignupViewController.swift in Sources */,
+				28845DDC1E65B45B008B01EA /* UserViewController.swift in Sources */,
 				28845DDA1E65A3A1008B01EA /* VerifyViewController.swift in Sources */,
 				28845DD41E658D82008B01EA /* LoginViewController.swift in Sources */,
 				2879CFAB1E65880F002A91A3 /* AppDelegate.swift in Sources */,

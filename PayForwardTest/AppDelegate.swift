@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  PayForwardTest
 //
-//  Created by Pankaj Khillon on 2/28/17.
+//  Created by Sarthak Khillon on 2/28/17.
 //  Copyright © 2017 Sarthak Khillon. All rights reserved.
 //
 
