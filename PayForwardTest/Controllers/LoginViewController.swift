@@ -16,20 +16,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTextField: UITextField!
     
     
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        self.login(email: self.emailTextField.text!, password: self.passwordTextField.text!)
+    }
+    
     // MARK: Custom functions
     func login(email: String, password: String) -> Void {
         if email == "" || password == "" {
-            self.presentBadLoginError()
+            self.show(errorMessage: "Your email and/or password are invalid")
         }
         else {
             FIRAuth.auth()?.signIn(withEmail: email, password: password) { (user, error) in
                 if error != nil {
-                    self.presentBadLoginError()
+                    self.show(errorMessage: "Authentication error")
                     print("Login authentication error: \(error)")
                 }
                 else {
-                    let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUp")
-                    self.present(nextVC!, animated: true, completion: nil)
+                    self.performSegue(withIdentifier: "login", sender: self)
                     print("Login successful")
                 }
             }
@@ -37,14 +40,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     // NOTE: We can customize error handling later, I just wanted a generic for now.
-    func presentBadLoginError() -> Void {
-        let errAlertController = UIAlertController(title: "Error", message: "Please enter a valid email address and password", preferredStyle: .alert)
-        
+    func show(errorMessage message: String) -> Void {
+        let errAlertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         errAlertController.addAction(okAction)
         
         self.present(errAlertController, animated: true, completion: nil)
     }
+
     
     // MARK: Text Field delegate functions
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -8,38 +8,51 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class VerifyViewController: UIViewController, UITextFieldDelegate {
     
-    // MARK: Connectors
+    var ref = FIRDatabase.database().reference()
     
+    // User Information
+    var userFirstName: String!
+    var userLastName: String!
+    var userBirthday: String!
+    var userZipCode: String!
+    var userEmail: String!
+    var userPassword: String!
+    var userPhoneNumber: String!
+    
+    // MARK: Connectors
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var policyLabel: UILabel!
     
-    // User Information
-    var userFirstName: String?
-    var userLastName: String?
-    var userBirthday: String?
-    var userZipCode: String?
-    var userEmail: String?
-    var userPassword: String?
-    
     @IBAction func verifyButtonTapped(_ sender: Any) {
         if phoneNumberIsValid() {
-            FIRAuth.auth()?.createUser(withEmail: self.userEmail!, password: self.userPassword!) { (user, error) in
+            self.userPhoneNumber = self.phoneNumberTextField.text!
+            
+            FIRAuth.auth()?.createUser(withEmail: self.userEmail, password: self.userPassword) { (user, error) in
                 
                 if error == nil {
-                    print("Successful sign up")
-                    // TODO: persist data to user profile
-                    self.performSegue(withIdentifier: "verified", sender: self)
+                    // persist data to user profile.
+                    // this method intentionally overwrites all child nodes under this user in the
+                    // unlikely possibility that there is already data stored in those fields.
+                    let userPath = self.ref.child("users")
+                    userPath.setValue(["firstName": self.userFirstName])
+                    userPath.setValue(["lastName": self.userLastName])
+                    userPath.setValue(["birthday": self.userBirthday])
+                    userPath.setValue(["zipCode": self.userZipCode])
+                    userPath.setValue(["phoneNumber": self.userPhoneNumber])
                 }
                 else {
-                    let errAlertController = UIAlertController(title: "Error", message: "Failed to create user", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                    errAlertController.addAction(okAction)
-                    self.present(errAlertController, animated: true, completion: nil)
+                    self.show(errorMessage: "Failed to create user")
                 }
             }
+            
+            self.performSegue(withIdentifier: "verified", sender: self)
+        }
+        else {
+            self.show(errorMessage: "Invalid phone number. Please try again")
         }
     }
     
@@ -49,8 +62,35 @@ class VerifyViewController: UIViewController, UITextFieldDelegate {
         return true
     }
 
+    func show(errorMessage message: String) -> Void {
+        let errAlertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        errAlertController.addAction(okAction)
+        
+        self.present(errAlertController, animated: true, completion: nil)
+    }
+    
     func phoneNumberIsValid() -> Bool {
-        // TODO
+        if let phone = self.phoneNumberTextField.text {
+            if phone == "" {
+                self.show(errorMessage: "Phone number cannot be left blank")
+                return false
+            }
+            else {
+                let toCheck = phone.components(separatedBy: CharacterSet.whitespaces).joined().replacingOccurrences(of: "-", with: "")
+                
+                for num in toCheck.unicodeScalars {
+                    if !(CharacterSet.decimalDigits.contains(num)) {
+                        return false
+                    }
+                }
+                
+            }
+        }
+        else {
+            return false
+        }
+        
         return true
     }
     
@@ -64,14 +104,5 @@ class VerifyViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        let newVC = segue.destination as! UserViewController
-        newVC.userID = FIRAuth.auth()?.currentUser?.uid
-    }
- 
 
 }
