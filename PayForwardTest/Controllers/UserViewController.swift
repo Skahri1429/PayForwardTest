@@ -38,7 +38,9 @@ class UserViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         let currentUser = FIRAuth.auth()?.currentUser
         
         ref.child("users").child((currentUser?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
@@ -54,11 +56,6 @@ class UserViewController: UIViewController {
             self.zipCodeLabel.text = value?["zipCode"] as? String ?? "No Zip Code found"
             self.birthdayLabel.text = value?["birthday"] as? String ?? "No birthday found"
         })
-        
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {
