@@ -12,7 +12,7 @@ import FirebaseDatabase
 
 class VerifyViewController: UIViewController, UITextFieldDelegate {
     
-    var ref = FIRDatabase.database().reference()
+    var ref = FIRDatabase.database().reference() // goes to root of JSON tree
     
     // User Information
     var userFirstName: String!
@@ -33,23 +33,58 @@ class VerifyViewController: UIViewController, UITextFieldDelegate {
             
             FIRAuth.auth()?.createUser(withEmail: self.userEmail, password: self.userPassword) { (user, error) in
                 
-                if error == nil {
-                    // persist data to user profile.
-                    // this method intentionally overwrites all child nodes under this user in the
-                    // unlikely possibility that there is already data stored in those fields.
-                    let userPath = self.ref.child("users")
-                    userPath.setValue(["firstName": self.userFirstName])
-                    userPath.setValue(["lastName": self.userLastName])
-                    userPath.setValue(["birthday": self.userBirthday])
-                    userPath.setValue(["zipCode": self.userZipCode])
-                    userPath.setValue(["phoneNumber": self.userPhoneNumber])
+                guard let _ = user else {
+                    self.show(errorMessage: "User could not be created: \(error)")
+                    return
                 }
-                else {
-                    self.show(errorMessage: "Failed to create user")
+                
+                // persist data to user profile.
+                // this method intentionally overwrites all child nodes under this user in the
+                // unlikely possibility that there is already data stored in those fields.
+                let userRef = FIRDatabase.database().reference(withPath: "user")
+                print("first name: \(self.userFirstName)")
+                userRef.child("firstName").setValue(self.userFirstName!, withCompletionBlock: { (err, _) in
+                    if err == nil {
+                        userRef.child("lastName").setValue(self.userLastName!, withCompletionBlock: { (err, _) in
+                            if err == nil {
+                                userRef.child("birthday").setValue(self.userBirthday!, withCompletionBlock: { (err, _) in
+                                    
+                                    if err == nil {
+                                        userRef.child("zipCode").setValue(self.userZipCode!, withCompletionBlock: { (err, _) in
+                                            
+                                            if err == nil {
+                                                userRef.child("phoneNumber").setValue(self.userPhoneNumber!, withCompletionBlock: { (err, _) in
+                                                    
+                                                    if err == nil {
+                                                        self.performSegue(withIdentifier: "verified", sender: self)
+                                                    }
+                                                    else {
+                                                       self.show(errorMessage: "Phone number could not be set: \(err)")
+                                                    }
+                                                })
+                                            }
+                                            else {
+                                                self.show(errorMessage: "Zip code could not be set: \(err)")
+                                            }
+                                        })
+                                    }
+                                    else {
+                                        self.show(errorMessage: "Birthday could not be set: \(err)")
+                                    }
+                                })
+                            }
+                            else {
+                                self.show(errorMessage: "Last name could not be set: \(err)")
+                            }
+                        })
+                    }
+                    else {
+                        self.show(errorMessage: "First name could not be set: \(err)")
+                    }
+                    
+                    
                 }
-            }
-            
-            self.performSegue(withIdentifier: "verified", sender: self)
+            )}
         }
         else {
             self.show(errorMessage: "Invalid phone number. Please try again")
