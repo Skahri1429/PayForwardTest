@@ -45,17 +45,19 @@ class VerifyViewController: UIViewController, UITextFieldDelegate {
                 print("first name: \(self.userFirstName)")
                 userRef.child("firstName").setValue(self.userFirstName!, withCompletionBlock: { (err, _) in
                     if err == nil {
+                        
                         userRef.child("lastName").setValue(self.userLastName!, withCompletionBlock: { (err, _) in
                             if err == nil {
+                                
                                 userRef.child("birthday").setValue(self.userBirthday!, withCompletionBlock: { (err, _) in
-                                    
                                     if err == nil {
+                                        
                                         userRef.child("zipCode").setValue(self.userZipCode!, withCompletionBlock: { (err, _) in
-                                            
                                             if err == nil {
+                                                
                                                 userRef.child("phoneNumber").setValue(self.userPhoneNumber!, withCompletionBlock: { (err, _) in
-                                                    
                                                     if err == nil {
+                                                        
                                                         self.performSegue(withIdentifier: "verified", sender: self)
                                                     }
                                                     else {
@@ -81,8 +83,6 @@ class VerifyViewController: UIViewController, UITextFieldDelegate {
                     else {
                         self.show(errorMessage: "First name could not be set: \(err)")
                     }
-                    
-                    
                 }
             )}
         }

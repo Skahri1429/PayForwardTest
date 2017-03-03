@@ -28,12 +28,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         else {
             FIRAuth.auth()?.signIn(withEmail: email, password: password) { (user, error) in
                 if error != nil {
-                    self.show(errorMessage: "Authentication error")
                     print("Login authentication error: \(error)")
+                    self.show(errorMessage: "Authentication error")
                 }
                 else {
-                    self.performSegue(withIdentifier: "login", sender: self)
                     print("Login successful")
+                    self.performSegue(withIdentifier: "login", sender: self)
                 }
             }
         }
@@ -61,11 +61,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
     }
